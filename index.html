@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio de ventas online">
+    <meta name="keywords" content="ventas, online">
+    <meta name="author" content="Manuel">
+    <title>Ventas Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ventas Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li> 
+                <li><a href="#carrito">Carrito</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a ventas online</h2>
+            <p>Aqui podras comprar de manera online, y sin moverte de tu casa, una gran variedad de productos.</p>
+            <div class="multimedia">
+                <img src="assets/images/VentasOnline.jpg" alt="Descripción de la imagen 1">
+                </div>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="product-cards-container">
+                </div>
+        </section>
+
+        <section id="reseñas">
+            <h2>Reseñas de Clientes</h2>
+            <div class="reviews-grid-container">
+                <div class="review-card">
+                    <h3>Juan</h3>
+                    <p>"¡Excelente servicio y productos de calidad!"</p>
+                </div>
+                <div class="review-card">
+                    <h3>Pedro</h3>
+                    <p>"Me encantó la experiencia de compra, muy recomendado."</p>
+                </div>
+                <div class="review-card">
+                    <h3>Daniela</h3>
+                    <p>"Volveré a comprar sin duda. El envío fue rápido."</p>
+                </div>
+                <div class="review-card">
+                    <h3>Eliot</h3>
+                    <p>"¡Productos innovadores y atención al cliente impecable!"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form id="contactForm" action="https://formspree.io/f/xrblbkrr" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+                <p id="formMessage" class="hidden"></p>
+            </form>
+        </section>
+
+        <section id="carrito">
+            <div class="cart-summary">
+                <h1>Productos (<span id="cart-count">0</span>)</h1>
+                <div class="multimedia">
+                    <img src="assets/images/descarga.png" alt="Descripción de la imagen 1">
+                </div>
+                <div id="cart-dropdown" class="hidden">
+                    <h3>Tu Carrito</h3>
+                    <ul id="cart-items-list"> </ul>
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <button id="checkout-button">Proceder al Pago</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;2025 Ventas Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
